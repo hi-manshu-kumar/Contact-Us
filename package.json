@@ -1,0 +1,28 @@
+{
+  "name": "contact-us",
+  "version": "1.0.0",
+  "description": "contact through various method",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hi-manshu-kumar/Contact-Us.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hi-manshu-kumar/Contact-Us/issues"
+  },
+  "homepage": "https://github.com/hi-manshu-kumar/Contact-Us#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "nexmo": "^2.4.0",
+    "nodemailer": "^4.6.8",
+    "socket.io": "^2.1.1"
+  }
+}
