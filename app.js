@@ -4,6 +4,9 @@ const ejs = require('ejs');
 const Nexmo = require('nexmo');
 const socketio = require('socket.io'); 
 const keys = require('./config/keys');
+const exphbs = require('express-handlebars');
+const nodemailer = require('nodemailer');
+const path = require('path');
 
 //Init app
 const app = express();
@@ -18,6 +21,8 @@ const nexmo = new Nexmo({
 //template engine setup
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
+// app.engine('handlebars', exphbs());
+// app.set('view engine', 'handlebars');
 
 //public folder setup
 app.use(express.static(__dirname + '/public'));

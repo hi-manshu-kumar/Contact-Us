@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h2>Send SMS Message</h2>
         <input type="tel" name="number" id="number" placeholder="Enter Phone Number...">
         <input type="text" name="msg" id="msg" placeholder="Enter Text Message...">
@@ -17,6 +19,35 @@
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> -->
+
+    <div id="wrapper" class="container">
+        <div class="header">
+            <h6>Contact US</h6>
+            <h3>Get In Touch</h3>
+        </div>
+        <div id="logo" class="row">
+            <div class="one-third column">
+                <i class="far fa-envelope"></i>
+                <p>E-mail</p>
+            </div>
+            <div class="one-third column">
+                <i class="far fa-comments"></i>
+                <p>SMS / Call</p>
+            </div>
+            <div class="one-third column">
+                <i class="far fa-robot"></i>
+                <p>ChatBot</p>
+            </div> 
+        </div>
+        <div id="content" class="container">
+            <h3>Send SMS Message</h3> <br>
+            <input type="tel" name="number" id="number" placeholder="*Enter Phone Number..."> <br>
+            <input type="text" name="msg" id="msg" placeholder="*Enter Text Message..."> <br>
+            <input type="button" id="button" class="btn-primary" value="Send Text">
+            <p class="resonse"></p>
+        </div>
+        <img src="./images/pencil.png" alt="pencil">
+    </div>
 </body>
 </html>
