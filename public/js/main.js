@@ -13,7 +13,7 @@ socket.on('smsStatus', function(data){
 function send(){
     const number = numberInput.value.replace(/\D/g, '');
     const text = textInput.value;
-
+    console.log('btn click');
     fetch('/', {
         method: 'post',
         headers: {
