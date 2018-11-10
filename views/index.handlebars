@@ -20,22 +20,22 @@
         <div id="logo" class="row">
             <div class="one-third column">
                 <a href="#mailContent">
-                    <i class="far fa-envelope animated infinite bounce slower delay-2s"></i>
-                    <p>E-mail</p>
+                    <i class="far fa-envelope animated infinite bounce slower delay-2s clickMail"></i>
+                    <p class="clickMail">E-mail</p>
                 </a>
             </div>
             <div class="one-third column">
                 <a href="#content">
-                    <i class="far fa-comments animated infinite bounce slower delay-2s"></i>
-                    <p>SMS / Call</p>
+                    <i class="far fa-comments animated infinite bounce slower delay-2s clickSMS"></i>
+                    <p class="clickSMS">SMS / Call</p>
                 </a>
             </div>
             <div class="one-third column">
-                <i class="far fa-robot animated infinite bounce slower delay-2s"></i>
-                <p>ChatBot</p>
+                <i  id="clickChat" class="far fa-robot animated infinite bounce slower delay-2s clickChat"></i>
+                <p class="clickChat">ChatBot</p>
             </div> 
         </div>
-        <div id="content" class="container animated bounceInRight">
+        <div id="content" class="container animated bounceInRight hide">
             <h3>Send SMS Message</h3> <br>
             <input type="tel" name="number" id="number" placeholder="* Enter Phone Number..." pattern="^\d{10}$" id="phone" maxlength="10"> <br>
             <input type="text" name="msg" id="msg" placeholder="* Enter Text Message..." required> <br>

@@ -23,6 +23,16 @@ h6 {
   font-weight: 300;
 }
 
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    color: white;
+}
+
 .container{
     /* border: 1px solid white; */
 }
@@ -134,4 +144,12 @@ textarea {
 
 #mail_Phone{
     margin-left: -161px;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide{
+    display: none !important;
 }
