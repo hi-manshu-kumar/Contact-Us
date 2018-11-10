@@ -11,7 +11,6 @@ body{
     background-color: #13b1cd;
     color: white;
     font-size: 300;
-    /* overflow: hidden;     */
 }
 
 h1,
@@ -50,7 +49,7 @@ a:link:active, a:visited:active {
 }
 
 .header h3 {
-    /* font-weight: bold; */
+
 }
 
 #logo{
@@ -105,8 +104,6 @@ input[type=text]:active, input[type=tel]:active, input[type=email]:active, texta
     width: 20%;
     border-radius: 3.125rem;
     transition: all 1s ease;
-    /* transition-delay:  1s; */
-    /* transition-timing-function: ease-in; */
 }
 
 /* #button:hover{
@@ -153,3 +150,111 @@ textarea {
 .hide{
     display: none !important;
 }
+
+/* Larger than mobile */
+@media (min-width: 300px) and (max-width: 559px) {
+    .header {
+        margin-top: 5rem;
+    }
+    #mail_email {
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    #mail_Phone {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    img{
+        display: none;
+    }
+
+    #mail_Name{
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+    }
+    
+    button{
+        width: 37%;
+    }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) and (max-width: 749px) {
+    #mail_Name{
+        width: 71%;
+    }
+
+    #mail_email{
+        margin-right: -48px;
+    }
+
+    #mail_Phone {
+        margin-left: -48px;
+    }
+
+    img{
+        left: -77px;
+    }
+
+    textarea{
+        width: 71%;
+    }
+
+    button{
+        width: 31%;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) and (max-width: 1024px) {
+    #mail_Name{
+        width: 71%;
+    }
+
+    #mail_email{
+        margin-right: -48px;
+    }
+
+    #mail_Phone {
+        margin-left: -48px;
+    }
+
+    img{
+        left: -77px;
+    }
+
+    textarea{
+        width: 71%;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #mail_Name{
+        width: 71%;
+    }
+
+    #mail_email{
+        margin-right: -67px;
+    }
+
+    #mail_Phone {
+        margin-left: -73px;
+    }
+
+    img{
+        left: -77px;
+    }
+
+    textarea{
+        width: 71%;
+    }
+}
+
+
+
