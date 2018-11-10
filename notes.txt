@@ -1,0 +1,13 @@
+heroku deploy-----------------
+heroku login
+heroku create
+    go to dashboard
+    go to deploy
+        copy heroku git remote
+heroku git:remote -a afternoon-tundra-47501
+heroku open
+
+to add some changes-----
+git add .
+git commit -am "deployed changes"
+git push heroku master 
