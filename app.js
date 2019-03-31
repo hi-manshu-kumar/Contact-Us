@@ -51,15 +51,26 @@ app.post('/' , (req, res) => {
             if(err) {
                 console.log(err);
             } else {
-                console.dir(responseData);
-                // GEt data from the response
-                const data  = {
-                    id: responseData.messages[0]['message-id'],
-                    number: responseData.message[0]['to'] 
-                }
+                const { messages } = responseData;
+                if(messages[0].status!=0){
+                    let data = 'Cant send message to unregistered numbers!!'
+                    io.emit('smsStatus', data);
+                } else {
+                    const { ['message-id']: id, ['to']: number, ['error-text']: error  } = messages[0];
 
-                // Emit to the client
-                io.emit('smsStatus', data);
+                    // Get data from response
+                    const data = {
+                        id,
+                        number,
+                        error
+                    };
+
+                    // Emit to the client
+                    if(data.error){
+                        io.emit('smsStatus', `Error from nexmo api ${data.error}`);
+                    } else {
+                    io.emit('smsStatus', data);}
+                }
             }
         });
 });
@@ -108,6 +119,11 @@ app.post('/send', (req, res) => {
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
             res.render('index', {msg: 'Email has been sent'});
         });
+});
+
+app.use(function (req, res, next){
+    res.send("Oops somehting wrong in url");
+    next();
 });
 
 // define port
