@@ -5,6 +5,7 @@ heroku create
     go to deploy
         copy heroku git remote
 heroku git:remote -a afternoon-tundra-47501
+git push heroku master 
 heroku open
 
 to add some changes-----
